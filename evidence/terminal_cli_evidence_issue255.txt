@@ -1,0 +1,49 @@
+$ lark-cli base +record-list --base-token app_x --table-id tbl_x --limit 50 --dry-run
+{
+  "api": [
+    {
+      "method": "GET",
+      "url": "/open-apis/base/v3/bases/app_x/tables/tbl_x/records",
+      "params": {
+        "limit": 50,
+        "offset": 0
+      }
+    }
+  ],
+  "base_token": "app_x",
+  "table_id": "tbl_x"
+}
+
+$ lark-cli base +record-list --base-token app_x --table-id tbl_x --view-id Main --limit 50 --dry-run
+{
+  "api": [
+    {
+      "method": "GET",
+      "url": "/open-apis/base/v3/bases/app_x/tables/tbl_x/records",
+      "params": {
+        "limit": 50,
+        "offset": 0,
+        "view_id": "\u003cresolved from view name: Main\u003e"
+      }
+    }
+  ],
+  "base_token": "app_x",
+  "table_id": "tbl_x"
+}
+
+$ lark-cli base +record-list --base-token app_x --table-id tbl_x --view-id vew_x --limit 50 --dry-run
+{
+  "api": [
+    {
+      "method": "GET",
+      "url": "/open-apis/base/v3/bases/app_x/tables/tbl_x/records",
+      "params": {
+        "limit": 50,
+        "offset": 0,
+        "view_id": "vew_x"
+      }
+    }
+  ],
+  "base_token": "app_x",
+  "table_id": "tbl_x"
+}
